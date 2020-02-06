@@ -1,6 +1,6 @@
-# Terraform Module Template
+# Terraform DNS zone - zerowastesgp.fr
 
-Template of a minimal Terraform module.
+Terraform module for managing the `zerowastesgp.fr` DNS zone.
 
 This module follows the [standard structure][standard-module-structure] described in the [Terraform documentation][terraform-docs].
 
