@@ -136,7 +136,7 @@ locals {
       type = "CNAME"
       ttl  = 0,
       targets = [
-        "zerowastesgp.fr.",
+        "zerowastesgp.github.io.",
       ]
     },
   ]
