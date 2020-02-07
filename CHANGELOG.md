@@ -1,3 +1,10 @@
+## v0.4.0 - Feb 7, 2020
+
+### Changes
+
+* Reorganise the DNS records to improve the visibility
+* Add a `TXT` record to get the domain verified by GitHub
+
 ## v0.3.0 - Feb 7, 2020
 
 ### Changes
