@@ -1,3 +1,9 @@
+## v0.3.0 - Feb 7, 2020
+
+### Changes
+
+* Make apex `A` records point to GitHub Pages
+
 ## v0.2.1 - Feb 7, 2020
 
 ### Fixes
