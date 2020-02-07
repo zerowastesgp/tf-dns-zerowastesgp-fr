@@ -19,6 +19,7 @@ locals {
         "1 redirect.ovh.net.",
       ]
     },
+    # See https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain.
     {
       name = ""
       type = "A"
@@ -110,6 +111,7 @@ locals {
         "0 0 465 ssl0.ovh.net.",
       ]
     },
+    # https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain.
     {
       name = "www"
       type = "CNAME"
