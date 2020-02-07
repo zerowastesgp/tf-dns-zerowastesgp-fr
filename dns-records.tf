@@ -2,6 +2,9 @@ locals {
   zone = "zerowastesgp.fr"
 
   dns_records = [
+    # -------------------------------------------------- #
+    # DNS zone configuration
+    # -------------------------------------------------- #
     {
       name = ""
       type = "NS"
@@ -9,14 +12,6 @@ locals {
       targets = [
         "dns100.ovh.net.",
         "ns100.ovh.net.",
-      ]
-    },
-    {
-      name = ""
-      type = "MX"
-      ttl  = 0,
-      targets = [
-        "1 redirect.ovh.net.",
       ]
     },
     # See https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain.
@@ -31,12 +26,24 @@ locals {
         "185.199.111.153",
       ]
     },
+    # https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain.
+    {
+      name = "www"
+      type = "CNAME"
+      ttl  = 0,
+      targets = [
+        "zerowastesgp.github.io.",
+      ]
+    },
+    # -------------------------------------------------- #
+    # Email configuration
+    # -------------------------------------------------- #
     {
       name = ""
-      type = "SPF"
-      ttl  = 600,
+      type = "MX"
+      ttl  = 0,
       targets = [
-        "\"v=spf1 include:mx.ovh.com ~all\"",
+        "1 redirect.ovh.net.",
       ]
     },
     {
@@ -56,30 +63,6 @@ locals {
       ]
     },
     {
-      name = "_autodiscover._tcp"
-      type = "SRV"
-      ttl  = 0,
-      targets = [
-        "0 0 443 mailconfig.ovh.net.",
-      ]
-    },
-    {
-      name = "imap"
-      type = "CNAME"
-      ttl  = 0,
-      targets = [
-        "ssl0.ovh.net.",
-      ]
-    },
-    {
-      name = "_imaps._tcp"
-      type = "SRV"
-      ttl  = 0,
-      targets = [
-        "0 0 993 ssl0.ovh.net.",
-      ]
-    },
-    {
       name = "mail"
       type = "CNAME"
       ttl  = 0,
@@ -96,11 +79,35 @@ locals {
       ]
     },
     {
+      name = "imap"
+      type = "CNAME"
+      ttl  = 0,
+      targets = [
+        "ssl0.ovh.net.",
+      ]
+    },
+    {
       name = "smtp"
       type = "CNAME"
       ttl  = 0,
       targets = [
         "ssl0.ovh.net.",
+      ]
+    },
+    {
+      name = "_autodiscover._tcp"
+      type = "SRV"
+      ttl  = 0,
+      targets = [
+        "0 0 443 mailconfig.ovh.net.",
+      ]
+    },
+    {
+      name = "_imaps._tcp"
+      type = "SRV"
+      ttl  = 0,
+      targets = [
+        "0 0 993 ssl0.ovh.net.",
       ]
     },
     {
@@ -111,13 +118,23 @@ locals {
         "0 0 465 ssl0.ovh.net.",
       ]
     },
-    # https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain.
     {
-      name = "www"
-      type = "CNAME"
+      name = ""
+      type = "SPF"
+      ttl  = 600,
+      targets = [
+        "\"v=spf1 include:mx.ovh.com ~all\"",
+      ]
+    },
+    # -------------------------------------------------- #
+    # Domain verification
+    # -------------------------------------------------- #
+    {
+      name = "_github-challenge-zerowastesgp"
+      type = "TXT"
       ttl  = 0,
       targets = [
-        "zerowastesgp.github.io.",
+        "\"c50ef36f27\"",
       ]
     },
   ]
