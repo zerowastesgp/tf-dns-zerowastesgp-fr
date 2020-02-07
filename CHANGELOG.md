@@ -1,3 +1,9 @@
+## v0.2.1 - Feb 7, 2020
+
+### Fixes
+
+* Delete `TXT` records causing a redirection issue
+
 ## v0.2.0 - Feb 7, 2020
 
 ### Changes
