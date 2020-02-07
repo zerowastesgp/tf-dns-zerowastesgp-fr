@@ -126,6 +126,17 @@ locals {
         "\"v=spf1 include:mx.ovh.com ~all\"",
       ]
     },
+    # -------------------------------------------------- #
+    # Domain verification
+    # -------------------------------------------------- #
+    {
+      name = "_github-challenge-zerowastesgp"
+      type = "TXT"
+      ttl  = 0,
+      targets = [
+        "\"c50ef36f27\"",
+      ]
+    },
   ]
 }
 
