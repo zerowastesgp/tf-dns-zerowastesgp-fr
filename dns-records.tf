@@ -29,14 +29,6 @@ locals {
     },
     {
       name = ""
-      type = "TXT"
-      ttl  = 0,
-      targets = [
-        "\"1|www.zerowastesgp.fr\"",
-      ]
-    },
-    {
-      name = ""
       type = "SPF"
       ttl  = 600,
       targets = [
@@ -113,22 +105,6 @@ locals {
       ttl  = 0,
       targets = [
         "0 0 465 ssl0.ovh.net.",
-      ]
-    },
-    {
-      name = "www"
-      type = "TXT"
-      ttl  = 0,
-      targets = [
-        "\"3|welcome\"",
-      ]
-    },
-    {
-      name = "www"
-      type = "TXT"
-      ttl  = 0,
-      targets = [
-        "\"l|fr\"",
       ]
     },
     {
