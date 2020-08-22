@@ -14,25 +14,22 @@ locals {
         "ns100.ovh.net.",
       ]
     },
-    # See https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain.
+    # See https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/#configure-an-apex-domain.
     {
       name = ""
       type = "A"
       ttl  = 0,
       targets = [
-        "185.199.108.153",
-        "185.199.109.153",
-        "185.199.110.153",
-        "185.199.111.153",
+        "104.198.14.52",
       ]
     },
-    # https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain.
+    # See https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/#configure-a-subdomain.
     {
       name = "www"
       type = "CNAME"
       ttl  = 0,
       targets = [
-        "zerowastesgp.github.io.",
+        "zerowaste-sgp-www.netlify.app.",
       ]
     },
     # -------------------------------------------------- #
