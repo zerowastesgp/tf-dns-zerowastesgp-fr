@@ -6,7 +6,7 @@ terraform {
     # https://www.terraform.io/docs/providers/ovh/.
     ovh = {
       source  = "terraform-providers/ovh"
-      version = "~> 0.6"
+      version = "~> 0.8"
     }
   }
 }
