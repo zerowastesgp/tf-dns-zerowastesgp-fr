@@ -1,3 +1,14 @@
+# Changelog
+
+## v0.6.0 - Nov 10, 2021
+
+### Changes
+
+* Add `Test` GitHub Actions workflow
+* Upgrade OVH provider to version 0.16
+* Upgrade Terraform pre-commit hooks to v1.56.0
+* Change file hierarchy
+
 ## v0.5.0 - Aug 22, 2020
 
 ### Changes
