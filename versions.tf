@@ -10,9 +10,8 @@ terraform {
     }
   }
 
-  # https://www.terraform.io/docs/backends/types/remote.html.
-  backend "remote" {
-    hostname     = "app.terraform.io"
+  # https://www.terraform.io/cli/cloud/settings#the-cloud-block.
+  cloud {
     organization = "zerowastesgp"
 
     workspaces {
