@@ -9,7 +9,7 @@ This module follows the [standard structure][standard-module-structure] describe
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.1.0 |
 | <a name="requirement_ovh"></a> [ovh](#requirement\_ovh) | ~> 0.16 |
 
 ## Providers
