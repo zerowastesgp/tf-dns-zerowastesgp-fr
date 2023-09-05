@@ -1,6 +1,8 @@
 locals {
   zone = "zerowastesgp.fr"
 
+  default_ttl = 300
+
   dns_records = [
     # -------------------------------------------------- #
     # DNS zone configuration
@@ -8,7 +10,7 @@ locals {
     {
       name = ""
       type = "NS"
-      ttl  = 0,
+      ttl  = local.default_ttl,
       targets = [
         "dns100.ovh.net.",
         "ns100.ovh.net.",
@@ -18,7 +20,7 @@ locals {
     {
       name = ""
       type = "A"
-      ttl  = 0,
+      ttl  = local.default_ttl,
       targets = [
         "104.198.14.52",
       ]
@@ -27,7 +29,7 @@ locals {
     {
       name = "www"
       type = "CNAME"
-      ttl  = 0,
+      ttl  = local.default_ttl,
       targets = [
         "zerowaste-sgp-www.netlify.app.",
       ]
@@ -38,7 +40,7 @@ locals {
     {
       name = ""
       type = "MX"
-      ttl  = 0,
+      ttl  = local.default_ttl,
       targets = [
         "1 redirect.ovh.net.",
       ]
@@ -46,7 +48,7 @@ locals {
     {
       name = "autoconfig"
       type = "CNAME"
-      ttl  = 0,
+      ttl  = local.default_ttl,
       targets = [
         "mailconfig.ovh.net.",
       ]
@@ -54,7 +56,7 @@ locals {
     {
       name = "autodiscover"
       type = "CNAME"
-      ttl  = 0,
+      ttl  = local.default_ttl,
       targets = [
         "mailconfig.ovh.net.",
       ]
@@ -62,7 +64,7 @@ locals {
     {
       name = "mail"
       type = "CNAME"
-      ttl  = 0,
+      ttl  = local.default_ttl,
       targets = [
         "ssl0.ovh.net.",
       ]
@@ -70,7 +72,7 @@ locals {
     {
       name = "pop3"
       type = "CNAME"
-      ttl  = 0,
+      ttl  = local.default_ttl,
       targets = [
         "ssl0.ovh.net.",
       ]
@@ -78,7 +80,7 @@ locals {
     {
       name = "imap"
       type = "CNAME"
-      ttl  = 0,
+      ttl  = local.default_ttl,
       targets = [
         "ssl0.ovh.net.",
       ]
@@ -86,7 +88,7 @@ locals {
     {
       name = "smtp"
       type = "CNAME"
-      ttl  = 0,
+      ttl  = local.default_ttl,
       targets = [
         "ssl0.ovh.net.",
       ]
@@ -94,7 +96,7 @@ locals {
     {
       name = "_autodiscover._tcp"
       type = "SRV"
-      ttl  = 0,
+      ttl  = local.default_ttl,
       targets = [
         "0 0 443 mailconfig.ovh.net.",
       ]
@@ -102,7 +104,7 @@ locals {
     {
       name = "_imaps._tcp"
       type = "SRV"
-      ttl  = 0,
+      ttl  = local.default_ttl,
       targets = [
         "0 0 993 ssl0.ovh.net.",
       ]
@@ -110,7 +112,7 @@ locals {
     {
       name = "_submission._tcp"
       type = "SRV"
-      ttl  = 0,
+      ttl  = local.default_ttl,
       targets = [
         "0 0 465 ssl0.ovh.net.",
       ]
@@ -129,7 +131,7 @@ locals {
     {
       name = "_github-challenge-zerowastesgp"
       type = "TXT"
-      ttl  = 0,
+      ttl  = local.default_ttl,
       targets = [
         "\"c50ef36f27\"",
       ]
