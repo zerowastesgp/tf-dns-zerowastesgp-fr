@@ -140,7 +140,8 @@ locals {
 }
 
 module "dns_records" {
-  source = "./modules/ovh-dns"
+  source  = "SkypLabs-Ltd/dns-records/ovh"
+  version = "~> 0.1"
 
   zone    = local.zone
   records = local.dns_records

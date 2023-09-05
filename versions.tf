@@ -6,7 +6,7 @@ terraform {
     # https://registry.terraform.io/providers/ovh/ovh.
     ovh = {
       source  = "ovh/ovh"
-      version = "~> 0.16"
+      version = "~> 0.25"
     }
   }
 

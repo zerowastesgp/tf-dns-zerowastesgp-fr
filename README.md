@@ -10,7 +10,7 @@ This module follows the [standard structure][standard-module-structure] describe
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.1.0 |
-| <a name="requirement_ovh"></a> [ovh](#requirement\_ovh) | ~> 0.16 |
+| <a name="requirement_ovh"></a> [ovh](#requirement\_ovh) | ~> 0.25 |
 
 ## Providers
 
@@ -20,7 +20,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_dns_records"></a> [dns\_records](#module\_dns\_records) | ./modules/ovh-dns | n/a |
+| <a name="module_dns_records"></a> [dns\_records](#module\_dns\_records) | SkypLabs-Ltd/dns-records/ovh | ~> 0.1 |
 
 ## Resources
 
